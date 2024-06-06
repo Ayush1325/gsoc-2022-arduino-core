@@ -12,6 +12,7 @@ int main(void) {
   for (;;) {
     loop();
     if (arduino::serialEventRun) arduino::serialEventRun();
+    k_yield();
   }
 
   return 0;
