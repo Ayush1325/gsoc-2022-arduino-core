@@ -58,7 +58,7 @@ uint16_t arduino::ZephyrSPI::transfer16(uint16_t data) {
 
 void arduino::ZephyrSPI::transfer(void *buf, size_t count) {
   int ret;
-  const struct spi_buf tx_buf = {.buf = &buf, .len = count};
+  const struct spi_buf tx_buf = {.buf = buf, .len = count};
   const struct spi_buf_set tx_buf_set = {
       .buffers = &tx_buf,
       .count = 1,
